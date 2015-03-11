@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />    
+    <title></title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+</head>
+
+<body>
+<header>
+    
+<h1>Lost'n Bother</h1>    
+</header>
+<nav>
+<ul class="tabs">
+    <li class="tab"><a href="#home" data-role="pagelink" class="activetab"><i class="fa fa-home" id="icon"></i>
+</a></li>
+    <li class="tab"><a href="#map" data-role="pagelink" class=""><i class="fa fa-map-marker" id="icon"></i>
+</a></li>
+    <li class="tab"><a href="#contact" data-role="pagelink" class=""><i class="fa fa-user" id="icon"></i>
+</a></li>
+</ul>
+</nav>
+
+<div data-role="page" id="home" class="">
+  <div data-role="content">
+    <h3>How it works</h3>
+    <p>Are you lost or looking for a random person to bother? If so, you're in the right place! Within this application, you will be able to find out where you are using a Google Static map which will contain a marker for your current location. You will also be able to access a random contact on your device using the Cordova Contacts api!</p>
+   
+  </div>
+</div>
+    
+<div data-role="page" id="map" class="hidden">
+  <div data-role="content">
+    <h3>Where are you</h3>
+      
+      <div id="output"></div>
+
+
+  </div>
+</div>
+
+<div data-role="page" id="contact" class="hidden">
+  <div data-role="content">
+    <h3>Who to Bother</h3>
+      
+
+      <div id="thecontact">
+      
+      </div>
+  
+  </div>
+</div>
+    <script src="cordova.js"></script>
+    <script src='js/fastclick.js'></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

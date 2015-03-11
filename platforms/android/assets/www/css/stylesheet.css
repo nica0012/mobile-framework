@@ -1,0 +1,214 @@
+@import url("http://c.boylett.uk/fonts/fontawesome/4/font-awesome.min.css");
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    color: #fff;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+
+h2,
+h3,
+p {
+    padding: 0.2rem 2rem;
+}
+
+h1 {
+    font-weight: 300;
+    padding-top: 10px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+header {
+    background-color: #3498db;
+    text-align: center;
+    font-size: .6em;
+    font-family: 'PT sans' Calabri, Arial, sans-serif;
+    height: 3rem;
+}
+/********************************
+        TABS
+********************************/
+
+nav {
+    height: 3rem;
+    width: 100%;
+}
+
+ul.tabs {
+    width: 100%;
+    /*margin-bottom:30px;*/
+}
+
+.tabs li.tab {
+    background-color: rgba(68, 68, 68, 0);
+    float: left;
+    height: 3.1rem;
+    display: inline-block;
+    width: 33.3333%;
+}
+
+.tabs li.tab a {
+    display: block;
+    padding: 0.5rem 2rem;
+    font-family: 'PT Sans', Calibri, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    height: 2rem;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    background-color: #3498db;
+    text-align: center;
+}
+
+.tabs li.tab a.activetab {
+    background-color: #fff;
+    color: #000;
+    /*
+	border-top:1px solid rgba(0, 0, 0, 0.58);
+	border-right:1px solid rgba(0, 0, 0, 0.58);
+	border-left:1px solid rgba(0, 0, 0, 0.58);
+*/
+    /* 
+  to hide the border on top of the page 
+  for the active tab only
+  */
+    
+    position: relative;
+    z-index: 30;
+}
+/*
+#icon{
+    
+
+    
+}
+*/
+/********************************
+        PAGES
+********************************/
+
+[data-role="page"] {
+    position: absolute;
+    top: 6rem;
+    color: #000;
+    margin-top: -1px;
+    left: 100%;
+    right: -10px;
+    transition: left 0.5s linear, right 0.5s linear;
+    z-index: 10;
+    /*** Items to trigger hardware acceleration ***/
+    
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+[data-role=page].active {
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: #fff;
+    border-top: 1px solid #666;
+}
+
+[data-role=page].show {
+    display: block;
+}
+
+[data-role=page].hidden {
+    display: none;
+}
+/*****
+[data-role="header"]{
+	background-color:#111;
+}
+[data-role="header"] h1{
+  text-shadow: 1px 1px 1px #0cf;
+  padding:0.4rem;
+  color:#d4d4d4;
+  text-align:center;
+  letter-spacing:0.3rem;
+  word-spacing: 1rem;
+  font-variant:small-caps;
+}
+********/
+
+[data-role="content"] {
+    padding-top: 1.0rem;
+}
+
+[data-role="content"] p:last-child {
+    padding-bottom: 4rem;
+}
+
+[data-rel="back"] {
+    float: left;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    color: #0C3;
+    font-size: 1rem;
+    line-height: 2.0rem;
+    text-decoration: none;
+    display: none;
+}
+/*MAP*/
+
+#output {
+    text-align: center;
+}
+
+canvas {
+    margin-top: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+}
+/*DELAY*/
+/*The Contact*/
+/*
+#contact{
+ text-align: center;   
+}
+*/
+
+#thecontact {
+    text-align: center;
+    border: .5px solid black;
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 60%;
+    height: 30%;
+    color: #fff;
+    background-color: #3498db;
+}
+
+
+@media screen and (max-width: 400px) {
+    canvas{
+        
+        width: 90%;
+    }
+}
